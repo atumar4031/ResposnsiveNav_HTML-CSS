@@ -1,0 +1,94 @@
+:root{
+    --dark-bg: #303030;
+    --white-color:#fff;
+    --light-gray:#f9f9f9;
+}
+*, html{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+main{
+    height: 100vh;
+    width: auto;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--dark-bg);
+    width: 100vw;
+}
+.nav-items{
+    display: none;
+}
+.nav-items li.nav-item{
+    
+    padding: .5rem .7rem;
+    text-align: center;
+    color: var(--white-color);
+}
+.toggle-menu{
+    position: relative;
+    width: 20px;
+    padding: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.toggle-menu > *{
+    cursor: pointer;
+}
+.toggle-menu .line{
+    width: 100%;
+    margin-bottom: 5px;
+    height: 2px;
+    background-color: var(--light-gray);
+}
+/*          menu effect */
+input[type='checkbox']{
+    display: none;
+}
+.content{
+    visibility: hidden;
+    position: absolute;
+    width: 90vw;
+    margin: 7px auto;
+    display: flex;
+    justify-content: center;
+
+}
+.content ul{
+    width: 100%;
+    list-style: none;
+
+}
+.content ul li{
+    padding: 5px;
+    text-align: center;
+    /* margin-bottom: 10px; */
+    font-size: .9rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+input[type='checkbox']:checked ~ label ~ .content{
+    visibility:visible;
+}
+
+/*git@github.com:atumar4031/ResposnsiveNav_HTML-CSS.git*/
+
+
+@media screen and (min-width: 820px){
+    .nav{
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+    .nav-items{
+        display: flex;
+        margin: 0 5px;
+    }
+
+    .toggle-menu{
+        display: none;
+    }
+}
+
